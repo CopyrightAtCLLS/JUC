@@ -2,13 +2,16 @@ package TicketSale;
 
 public class TicketSaleWithDanger {
     public static void main(String[] args) {
-        Ticket ticket=new Ticket();
-        new Thread(()->{ticket.sale();},"A").start();
-        new Thread(()->{ticket.sale();},"B").start();
-        new Thread(()->{ticket.sale();},"C").start();
+        SecureTicket secureTicket =new SecureTicket();
+        new Thread(()->{
+            secureTicket.sale();},"A").start();
+        new Thread(()->{
+            secureTicket.sale();},"B").start();
+        new Thread(()->{
+            secureTicket.sale();},"C").start();
     }
 }
-class Ticket{
+class InsecureTicket {
     private int ticket=5;
 
     public void sale(){
