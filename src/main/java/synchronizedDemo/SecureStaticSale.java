@@ -1,4 +1,4 @@
-package SynchronizedDemo;
+package synchronizedDemo;
 
 public class SecureStaticSale {
     public static void main(String[] args) {
