@@ -1,14 +1,14 @@
-package TicketSale;
+package SynchronizedDemo;
 
-public class TicketSaleWithDanger {
+public class InsecureTicketSale {
     public static void main(String[] args) {
-        SecureTicket secureTicket =new SecureTicket();
+        InsecureTicket insecureTicket =new InsecureTicket();
         new Thread(()->{
-            secureTicket.sale();},"A").start();
+            insecureTicket.sale();},"A").start();
         new Thread(()->{
-            secureTicket.sale();},"B").start();
+            insecureTicket.sale();},"B").start();
         new Thread(()->{
-            secureTicket.sale();},"C").start();
+            insecureTicket.sale();},"C").start();
     }
 }
 class InsecureTicket {
