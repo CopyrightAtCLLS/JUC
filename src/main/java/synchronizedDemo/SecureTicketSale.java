@@ -25,8 +25,9 @@ class SecureTicket {
     private int ticket = 50;
 
     //创建一个锁对象,一定要放在run方法(使用的方法)外部
-    Object obj=new Object();
+//    Object obj=new Object();
 
+    //同步代码块实现
     public void sale() {
         System.out.println(this);
         while (true) {
@@ -41,6 +42,7 @@ class SecureTicket {
         }
     }
 
+    //同步方法实现
     public synchronized void sale_1() {
         System.out.println(this);
             if (ticket > 0) {
