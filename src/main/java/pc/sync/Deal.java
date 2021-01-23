@@ -1,5 +1,5 @@
 package pc.sync;
-
+@SuppressWarnings("all")
 public class Deal {
     public static void main(String[] args) {
         Data data = new Data();
@@ -47,6 +47,7 @@ public class Deal {
         }, "B").start();
     }
 }
+@SuppressWarnings("all")
 class Data {
     private int number=0;
 
