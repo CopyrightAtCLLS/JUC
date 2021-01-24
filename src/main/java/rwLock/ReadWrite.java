@@ -1,5 +1,6 @@
 package rwLock;
 
+import java.util.AbstractQueue;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.locks.ReadWriteLock;
@@ -14,7 +15,6 @@ public class ReadWrite {
                 cache.write(temp+"", temp+"");
             }, String.valueOf(i + 1)).start();
         }
-
         for(int i=0;i<6;i++) {
             int temp=i;
             new Thread(() -> {
