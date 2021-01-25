@@ -1,4 +1,4 @@
-package jmm;
+package jmm.visibility;
 
 import java.util.concurrent.TimeUnit;
 
