@@ -2,11 +2,12 @@ package singleton;
 
 import sun.misc.Unsafe;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class LazyLoading {
+
     private LazyLoading() {
     }
-
-    ;
 
     /**
      * volatile是为了防止对象初始化时出现指令重排
@@ -28,6 +29,9 @@ public class LazyLoading {
     }
 
     public static void main(String[] args) {
-        LazyLoading lazyLoading=LazyLoading.getInstance();
+        LazyLoading lazyLoading = LazyLoading.getInstance();
+        LazyLoading lazyLoading2 = LazyLoading.getInstance();
+        System.out.println(lazyLoading);
+        System.out.println(lazyLoading2);
     }
 }
