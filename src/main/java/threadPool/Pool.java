@@ -1,6 +1,7 @@
 package threadPool;
 
 import java.util.concurrent.*;
+import java.util.function.Predicate;
 
 public class Pool {
     public static void main(String[] args) {
@@ -8,6 +9,8 @@ public class Pool {
 //        ExecutorService threadPool= Executors.newFixedThreadPool(3);  //固定大小线程池
 //        ExecutorService threadPool= Executors.newCachedThreadPool();  //可变大小线程池
 
+//        获取cpu核数
+//        System.out.println(Runtime.getRuntime().availableProcessors());
         ExecutorService threadPool = new ThreadPoolExecutor(
                 1,
                 3,
