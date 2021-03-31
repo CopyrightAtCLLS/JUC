@@ -1,4 +1,4 @@
-package Callable.demo2;
+package callable.demo2;
 
 import java.util.concurrent.*;
 
